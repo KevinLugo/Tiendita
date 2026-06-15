@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistema de Inventario</title>
+
+    <link rel="stylesheet" href="inicio.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Abarrotes</h2>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html" class="activo">
+                        <i class="fa-solid fa-house"></i>
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ventas.html">
+                        <i class="fa-solid fa-cash-register"></i>
+                        Ventas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="productos.html">
+                        <i class="fa-solid fa-box"></i>
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="proveedores.html">
+                        <i class="fa-solid fa-truck"></i>
+                        Proveedores
+                    </a>
+                </li>
+
+                <li>
+                    <a href="personal.html">
+                        <i class="fa-solid fa-user"></i>
+                        Personal
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reportes.html">
+                        <i class="fa-solid fa-chart-column"></i>
+                        Reportes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar Sesión
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="contenido">
+
+            <div class="encabezado">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Bienvenido al Sistema de Gestión de Inventario
+                </p>
+
+            </div>
+
+            <!-- TARJETAS -->
+            <section class="cards">
+
+                <div class="card">
+                    <h3>Productos</h3>
+                    <p>120</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ventas Hoy</h3>
+                    <p>45</p>
+                </div>
+
+                <div class="card">
+                    <h3>Stock Bajo</h3>
+                    <p>8</p>
+                </div>
+
+                <div class="card">
+                    <h3>Proveedores</h3>
+                    <p>12</p>
+                </div>
+
+            </section>
+
+            <!-- ACCESOS RAPIDOS -->
+            <section class="accesos">
+
+                <h2>Accesos Rápidos</h2>
+
+                <div class="botones">
+
+                    <a href="productos.html" class="btn">
+                        Gestionar Productos
+                    </a>
+
+                    <a href="ventas.html" class="btn">
+                        Registrar Venta
+                    </a>
+
+                    <a href="proveedores.html" class="btn">
+                        Ver Proveedores
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- TABLA -->
+            <section class="tabla">
+
+                <h2>Productos con Poco Stock</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Stock actual</th>
+                            <th>Stock minimo</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Leche Alpura</td>
+                            <td>2</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Coca Cola 600ml</td>
+                            <td>3</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Sabritas</td>
+                            <td>4</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+<script src="inicio.js"></script>
+</body>
+</html>

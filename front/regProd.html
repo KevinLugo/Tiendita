@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del producto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+
+        <h1>Registrar producto</h1>
+        <h3>Sistema de Inventario</h3>
+
+        <form id="registroForm">
+            <label for="Codigo de barras">Codigo de barras</label>
+                <input type="text" id="cb" placeholder="Escriba el codigo de barras del producto" name="codBar" maxlength="50">
+
+            <label for="nombre">Nombre del producto</label>
+                <input type="text" id="nomProd" placeholder="Escriba el nombre del producto" name="prod" maxlength="100">
+
+            <label for="caducidad">Fecha de caducidad</label>
+                <input type="date" id="cad" name="cad">
+
+            <label for="categoria">¿De que categoria es el producto?</label>
+                <select name="categorias" id="cat">
+                    <option value="" selected>Elige una opcion...</option>
+                    <option value="1">Lácteos y Huevos</option>
+                    <option value="2">Bebidas y Jugos</option>
+                    <option value="3">Botanas y Snacks</option>
+                    <option value="4">Enlatados y Conservas</option>
+                    <option value="5">Cuidado del Hogar</option>
+                </select>
+
+            <label for="categoria">¿Qué proveedor le vendio el producto?</label>
+            <select name="prov" id="prov">
+                <option value="">Opciones:</option>
+            </select>
+
+            <label for="precioCompra">¿Cual es el precio de compra?</label>
+                <input type="text" id="pCompra" placeholder="Escriba el precio de compra" name="precCompra" maxlength="13">
+
+            <label for="precioVenta">¿Cual es el precio de venta?</label>
+                <input type="text" id="pVenta" placeholder="Escriba el precio de venta" name="precVenta" maxlength="13">
+
+            <label for="stockActual">¿Cual es el stock actual del producto?</label>
+                <input type="text" id="sActual" placeholder="Escriba el stock actual" name="stockAct" maxlength="5">
+
+            <label for="stockMin">¿Cual es el stock minimo del producto?</label>
+                <input type="text" id="sMin" placeholder="Escriba el stock minimo" name="stockMin" maxlength="5">
+
+            <input type="button" id="boton1" value="Registrar producto">
+        </form>
+
+        <a href="inicio.html"><button style="background:#666;">Regresar</button></a>
+
+    </div>
+
+    <script src="regProd.js"></script>
+
+</body>
+</html>

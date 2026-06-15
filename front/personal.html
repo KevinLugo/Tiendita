@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal - Sistema de Inventario</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de personal</h1>
+        
+        <div class="acciones">
+            <input type="text" id="buscar" placeholder="Buscar por RFC, nombre o apellidos" onkeyup="buscarPersonal()">
+            <button onclick="location.href='regPersonal.html'">+ Agregar Personal</button>
+            <a href="inicio.html"><button style="background:#666;">← Volver al inicio</button></a>
+        </div>
+
+        <table id="tablaProductos">
+            <thead>
+            <tr>
+            <th>RFC</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Nombre</th>
+            <th>Ap Paterno</th>
+            <th>Ap Materno</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>salario</th>
+            <th>Estatus</th>
+            <th>Turno</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <!-- bana aparecer el personal con magia -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="personal.js"></script>
+</body>
+</html>

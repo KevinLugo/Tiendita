@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizacion del personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+
+        <h1>Actualizar personal</h1>
+        <h3>Sistema de Inventario</h3>
+
+        <form id="registroForm">
+
+            <label for="RFC">RFC</label>
+                <input type="text" id="rfc" placeholder="Escriba el RFC" name="rfc" maxlength="13" style="text-transform: uppercase;" oninput="this.value = this.value.toUpperCase();">
+
+            <label for="Usuario">Nombre de usuario</label>
+                <input type="text" id="user" placeholder="Escriba el nombre de usuario" name="usuario" maxlength="50">
+
+            <label for="Contraseña">Contraseña</label>
+                <input type="text" id="psw" placeholder="Escriba la contraseña" name="contra" maxlength="50">
+
+            <label for="nombre">Nombre</label>
+                <input type="text" id="nom" placeholder="Escriba el nombre" name="nombre" maxlength="30">
+
+            <label for="apPat">Apellido paterno</label>
+                <input type="text" id="apPat" placeholder="Escriba el apellido paterno" name="apePat" maxlength="30">
+
+            <label for="apPat">Apellido materno</label>
+                <input type="text" id="apMat" placeholder="Escriba el apellido materno" name="apeMat" maxlength="30">
+
+            <label for="telefono">Telefono</label>
+                <input type="text" id="tel" placeholder="Escriba el telefono" name="telef" maxlength="10">
+            
+            <label for="Email">Email</label>
+                <input type="text" id="email" placeholder="Escriba el email" name="email" maxlength="55">
+
+            <label for="salario">Salario</label>
+                <input type="text" id="salario" placeholder="Escriba el salario" name="salario" maxlength="8">
+            
+
+            <label for="turno">¿De que turno va a trabajar?</label>
+                <select name="turno" id="turno">
+                    <option value="" selected>Elige una opcion...</option>
+                    <option value="Matutino">Matutino</option>
+                    <option value="Vespertino">Vespertino</option>
+                </select>
+
+            <label for="turno">¿Es administrador o empleado?</label>
+                <select name="rol" id="idRol">
+                    <option value="" selected>Elige una opcion...</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Vendedor</option>
+                </select>
+
+            <input type="button" id="boton1" value="Registrar producto">
+        </form>
+
+        <a href="inicio.html"><button style="background:#666;">Regresar</button></a>
+
+    </div>
+
+    <script src="modPersonal.js"></script>
+
+</body>
+</html>

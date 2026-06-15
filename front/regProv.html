@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del proveedor</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+
+        <h1>Registrar proveedor</h1>
+        <h3>Sistema de Inventario</h3>
+
+        <form id="registroForm">
+
+            <label for="nombre empresa">Nombre de la empresa</label>
+            <label>Si no tiene poner NA</label>
+                <input type="text" id="nomEmp" placeholder="Escriba el nombre de la empresa" name="nomEmp" maxlength="100">
+
+            <label for="nombre del provedor">Nombre del proveedor</label>
+                <input type="text" id="nomProv" placeholder="Escriba el nombre del proveedor" name="nomProv" maxlength="50">
+
+            <label for="telefono">Telefono</label>
+                <input type="text" id="telProv" placeholder="Escriba el telefono del proveedor" name="telef" maxlength="10">
+            
+            <label for="Email">Email</label>
+                <input type="text" id="emailProv" placeholder="Escriba el email" name="email" maxlength="55">
+
+            <input type="button" id="boton1" value="Registrar producto">
+        </form>
+
+        <a href="inicio.html"><button style="background:#666;">Regresar</button></a>
+
+    </div>
+
+    <script src="regProv.js"></script>
+
+</body>
+</html>

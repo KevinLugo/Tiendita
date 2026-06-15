@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Sistema de Inventario</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Productos</h1>
+        
+        <div class="acciones">
+            <input type="text" id="buscar" placeholder="Buscar por producto, categoria, empresa o proveedor" onkeyup="buscarProducto()" style="width: 350px;">
+            <button onclick="location.href='regProd.html'">+ Agregar Producto</button>
+            <a href="inicio.html"><button style="background:#666;">← Volver al inicio</button></a>
+        </div>
+
+        <table id="tablaProductos">
+            <thead>
+            <tr>
+            <th>Código Barras</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Empresa</th>
+            <th>Proveedor</th>
+            <th>Compra</th>
+            <th>Venta</th>
+            <th>Stock</th>
+            <th>Stock Min</th>
+            <th>Caducidad</th>
+            <th>Estado</th>
+            <th>Registrado por</th>
+            <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <!--asemos magia para k aparescan los productos -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="productos.js"></script>
+</body>
+</html>

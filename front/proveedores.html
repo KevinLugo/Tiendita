@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores - Sistema de Inventario</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de proveedores</h1>
+        
+        <div class="acciones">
+            <input type="text" id="buscar" placeholder="Buscar por empresa o proveedor" onkeyup="buscarProveedor()">
+            <button onclick="location.href='regProv.html'">+ Agregar Proveedor</button>
+            <a href="inicio.html"><button style="background:#666;">← Volver al inicio</button></a>
+        </div>
+
+        <table id="tablaProductos">
+            <thead>
+            <tr>
+            <th>Empresa</th>
+            <th>Proveedor</th>
+            <th>telefono proveedor</th>
+            <th>Email proveedor</th>
+            <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <!--los probedores apareseran con magia -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="proveedores.js"></script>
+</body>
+</html>
