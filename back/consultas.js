@@ -13,7 +13,7 @@ export async function inLog(usr, psw) {
   try {
     const [rows] = await db.execute(
       `SELECT roles.nomRol, usuarios.idUser, usuarios.activo, usuarios.idRol FROM usuarios INNER JOIN roles ON 
-      usuarios.idRol = roles.idRol WHERE usuarios.user = ? AND usuarios.psw = ?`, [usr, psw]);
+      usuarios.idRol = roles.idRol WHERE usuarios.user = ? AND BINARY usuarios.psw = ?`, [usr, psw]);
     return rows;
   } catch (error) {
     console.error("Error en buscar al usuario:", error);
