@@ -1,0 +1,17 @@
+Para que funcione la pagina se debe tener instalado NODE.js y NPM
+
+Para prender el servidor local diríjase en el CMD a la carpeta back y ejecute el comando npm run dev
+
+Para acceder a la pagina tiene que iniciar sesión en el login
+
+el usuario administrador es: 
+che
+
+la contraseña del administrador es:
+321
+
+El usuario vendedor es:
+ana
+
+La contraseña del vendedor es:
+abc
