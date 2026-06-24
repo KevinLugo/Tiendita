@@ -1,3 +1,12 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
 async function cargarDashboard() {
   try {
     const res = await fetch("http://localhost:3000/api/dashboard");
@@ -66,6 +75,7 @@ function ocultarAcceso(href) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  sesion();
   cargarDashboard();
   aplicarPermisos();
 });

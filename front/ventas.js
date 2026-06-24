@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 let productos = [];
 let carrito = [];
 
@@ -171,3 +181,7 @@ async function finalizarVenta() {
         await cargarProductos(); //ase magia otrabes
     }
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

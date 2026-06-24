@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 const API_URL = "http://localhost:3000/api/productosFull"; // ajusta si cambia tu ruta
 
 let productos = [];
@@ -112,3 +122,7 @@ async function activar(id) {
     alert("Producto restaurado");
     cargarProductos();
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

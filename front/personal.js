@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 const API_URL = "http://localhost:3000/api/personal"; // ajusta si cambia tu ruta
 
 let personal = [];
@@ -97,3 +107,7 @@ async function activar(id) {
     alert("Personal restaurado");
     cargarPersonal();
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

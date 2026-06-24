@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 let ventasGuardadas = [];
 async function cargarVentas() {
     const res = await fetch('http://localhost:3000/api/reportes');
@@ -74,3 +84,7 @@ function renderizarTabla(ventas) {
 
 //por defekto karga el reporte de oi
 document.addEventListener('DOMContentLoaded', cargarVentas);
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

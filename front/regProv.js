@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 //valido caracteres  del nombre de la empresa
 function validA(e) {
   const letra = e.key;
@@ -95,4 +105,8 @@ document.getElementById("boton1").addEventListener("click", async () => {
       window.location.href = "inicio.html";
     
   }   
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
 });

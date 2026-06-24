@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 //valido caracteres  del nombre del producto
 function validA(e) {
   const letra = e.key;
@@ -136,3 +146,6 @@ async function cargarProv() {
 
 //lo ejekutamos y no al codigo
 window.addEventListener("DOMContentLoaded", cargarProv);
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

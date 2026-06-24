@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 const params = new URLSearchParams(window.location.search);
 const idProducto = params.get("id");
 
@@ -169,6 +179,7 @@ async function cargarProv() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  sesion();
   await cargarProv();   //primero llena el selek
   await cargarProducto(); //luego selecciona el balor correcto
 });

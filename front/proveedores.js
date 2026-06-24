@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 const API_URL = "http://localhost:3000/api/proveedores"; // ajusta si cambia tu ruta
 
 let proveedores = [];
@@ -56,3 +66,7 @@ function buscarProveedor() {
 function editarProveedor(id) {
     window.location.href = `modProv.html?id=${id}`;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

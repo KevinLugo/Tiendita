@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 const params = new URLSearchParams(window.location.search);
 const idProv = params.get("id");
 
@@ -119,3 +129,6 @@ document.getElementById("boton1").addEventListener("click", async () => {
 });
 
 window.addEventListener("DOMContentLoaded", cargarProveedor);
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
+});

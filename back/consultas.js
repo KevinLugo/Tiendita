@@ -99,7 +99,7 @@ export async function obtenerReportes() {
     const [rows] = await db.query(`
         SELECT v.idVenta, v.idVendedor, v.fechaVenta, v.total, u.nom, u.apPat, u.apMat, d.cantidad, d.precio, p.nomProd FROM 
         ventas v JOIN detalle_ventas d ON v.idVenta = d.idVenta JOIN productos p ON d.idProd = p.idProd JOIN usuarios u ON 
-        v.idVendedor=idUser ORDER BY v.idVenta DESC`);
+        v.idVendedor=u.idUser ORDER BY v.idVenta DESC`);
 
     const ventas = {};
 
@@ -107,7 +107,7 @@ export async function obtenerReportes() {
         if (!ventas[r.idVenta]) {
             ventas[r.idVenta] = {
                 folio: r.idVenta,
-                fecha: new Date(r.fechaVenta).toLocaleDateString('sv-SE'),
+                fecha: r.fechaVenta.toISOString().split('T')[0],
                 total: r.total,
                 nombreVend:r.nom+' '+r.apPat+' '+r.apMat,
                 detalles: []

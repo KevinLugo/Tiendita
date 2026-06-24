@@ -1,3 +1,13 @@
+function sesion() {
+  const rol = sessionStorage.getItem("idRol");
+
+  if (!rol) {
+    alert("Inicie sesion");
+    window.location.href = "login.html";
+
+  }
+}
+
 //constante pal rfc
 const rfcSi = [
   //numeros
@@ -181,4 +191,8 @@ document.getElementById("boton1").addEventListener("click", async () => {
       window.location.href = "inicio.html";
     }
   }   
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  sesion();
 });
